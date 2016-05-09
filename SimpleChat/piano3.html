@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Piano 3</title>
+    <link type="text/css" rel="stylesheet" href="sass/piano3.scss" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="piano3.js"></script>
+    <!--<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />-->
+    <!--<linl href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />-->
+    <script language="JavaScript" src="require.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <h1>Play The <b>CSS3</b> Piano!</h1>
+        <ol class="scale-1">
+            <li data-note="c" >C</li>
+            <li data-note="cs" class="ebony">C# D♭</li>
+            <li data-note="d">D</li>
+            <li data-note="ds" class="ebony">D# E♭</li>
+            <li data-note="e">E</li>
+            <li data-note="f">F</li>
+            <li data-note="fs" class="ebony">F# G♭</li>
+            <li data-note="g">G</li>
+            <li data-note="gs" class="ebony">G# A♭</li>
+            <li data-note="a">A</li>
+            <li data-note="as" class="ebony">A# B♭</li>
+            <li data-note="b">B</li>
+        </ol>
+
+        <ol class="scale-2">
+            <li data-note="c">C</li>
+            <li data-note="cs" class="ebony">C# D♭</li>
+            <li data-note="d">D</li>
+            <li data-note="ds" class="ebony">D# E♭</li>
+            <li data-note="e">E</li>
+            <li data-note="f">F</li>
+            <li data-note="fs" class="ebony">F# G♭</li>
+            <li data-note="g">G</li>
+            <li data-note="gs" class="ebony">G# A♭</li>
+            <li data-note="a">A</li>
+            <li data-note="as" class="ebony">A# B♭</li>
+            <li data-note="b">B</li>
+        </ol>
+        <!-- ol class="scale-3">
+          <li data-note="c">C</li>
+          <li data-note="cs" class="ebony">C# D♭</li>
+          <li data-note="d">D</li>
+          <li data-note="ds" class="ebony">D# E♭</li>
+          <li data-note="e">E</li>
+          <li data-note="f">F</li>
+          <li data-note="fs" class="ebony">F# G♭</li>
+          <li data-note="g">G</li>
+          <li data-note="gs" class="ebony">G# A♭</li>
+          <li data-note="a">A</li>
+          <li data-note="as" class="ebony">A# B</li>
+          <li data-note="b">B</li>
+        </ol -->
+    </div>
+
+    <!-- Original mp3 files from http://www.vibrationdata.com/piano.htm -->
+
+    C <audio id="mid-c" preload="auto" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_middle_C.mp3"></source>
+    </audio>
+    C# <audio preload="auto" id="mid-c-sharp" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_C_sharp.mp3"></source>
+    </audio>
+    D <audio preload="auto" id="mid-d" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_D.mp3"></source>
+    </audio>
+    D# <audio preload="auto" id="mid-d-sharp" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_D_sharp.mp3"></source>
+    </audio>
+    E <audio preload="auto" id="mid-e" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_E.mp3"></source>
+    </audio>
+    F <audio preload="auto" id="mid-f" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_F.mp3"></source>
+    </audio>
+    F# <audio preload="auto" id="mid-f-sharp" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_F_sharp.mp3"></source>
+    </audio>
+    G <audio preload="auto" id="mid-g" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_G.mp3"></source>
+    </audio>
+    G#<audio preload="auto" id="mid-g-sharp" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_G_sharp.mp3"></source>
+    </audio>
+    A <audio preload="auto" id="mid-a" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_A.mp3"></source>
+    </audio>
+    A# <audio preload="auto" id="mid-a-sharp" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_A_sharp.mp3"></source>
+    </audio>
+    B <audio preload="auto" id="mid-b" controls>
+        <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_B.mp3"></source>
+    </audio>
+</body>
+</html>
