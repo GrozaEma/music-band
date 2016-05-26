@@ -1,9 +1,126 @@
-.error {
-    border: 1px #f00;
-    background-color: #fdd;
+$background-color: #E6DCDB;
+
+$accent-color: #7E3661;
+$light-color: #F6F7F2;
+
+%font-definition {
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;    
+    font-style: normal;
 }
 
-.seriousError {
-    @extend .error;
-    border-width: 3px;
+body, * {
+    @extend %font-definition;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $background-color;
+    color: $accent-color;
+}
+
+h1 {
+    @extend %font-definition;
+    font-size: 30px;
+    font-variant: small-caps;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+h3 {
+    @extend %font-definition;
+    font-size: 18px;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 15.4px;
+}
+
+p, label, span, input, button {
+    @extend %font-definition;
+    font-size: 20px;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+%space-before {
+    margin-top: 10px;
+}
+
+%space-after {
+    margin-bottom: 30px;
+}
+
+%primary-button {
+    width: 150px;
+    height: 50px;
+    background-color: $light-color;
+    border: none;
+    border-radius: 2px;
+    color: $accent-color;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 45px;
+    text-align: center;
+    width: 1170px;
+
+    .music-form {
+        background-color: $accent-color;
+        border: 3px solid $light-color;
+        border-radius: 20px;
+        color: $light-color;
+        padding: 30px 0;
+
+        .username {
+            @extend %space-after;
+
+            input {
+                @extend %space-after;
+                display: block;
+            }
+
+            input {
+                @extend %font-definition;
+                background: none;
+                border: 0;
+                border-bottom: 2px solid $light-color;
+                box-sizing: border-box;
+                color: $light-color;
+                margin-left: auto;
+                margin-right: auto;
+                outline: none;
+                padding: 10px;
+                resize: none;
+                text-align: center;
+                width: 300px;
+            }
+        }
+
+        .instrument {
+            ul {
+                @extend %space-before;
+                list-style: outside none none;
+                margin-left: auto;
+                margin-right: auto;
+                width: 600px;
+
+                li {
+                    cursor: pointer;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    display: inline-block;
+                    height: 150px;
+                    line-height: 150px;
+                    margin: 5px 5px 10px;
+                    text-align: center;
+                    width: 250px;
+                }
+            }
+        }
+    }
 }

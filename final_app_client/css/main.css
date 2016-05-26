@@ -1,6 +1,78 @@
-.error, .seriousError {
-  border: 1px #f00;
-  background-color: #fdd; }
+body, *, h1, h3, p, label, span, input, button, .container .music-form .username input {
+  font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+  font-style: normal; }
 
-.seriousError {
-  border-width: 3px; }
+body, * {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #E6DCDB;
+  color: #7E3661; }
+
+h1 {
+  font-size: 30px;
+  font-variant: small-caps;
+  font-weight: 400;
+  line-height: 60px; }
+
+h3 {
+  font-size: 18px;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px; }
+
+p, label, span, input, button {
+  font-size: 20px;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px; }
+
+.container .music-form .instrument ul {
+  margin-top: 10px; }
+
+.container .music-form .username, .container .music-form .username input {
+  margin-bottom: 30px; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px;
+  text-align: center;
+  width: 1170px; }
+  .container .music-form {
+    background-color: #7E3661;
+    border: 3px solid #F6F7F2;
+    border-radius: 20px;
+    color: #F6F7F2;
+    padding: 30px 0; }
+    .container .music-form .username input {
+      display: block; }
+    .container .music-form .username input {
+      background: none;
+      border: 0;
+      border-bottom: 2px solid #F6F7F2;
+      box-sizing: border-box;
+      color: #F6F7F2;
+      margin-left: auto;
+      margin-right: auto;
+      outline: none;
+      padding: 10px;
+      resize: none;
+      text-align: center;
+      width: 300px; }
+    .container .music-form .instrument ul {
+      list-style: outside none none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px; }
+      .container .music-form .instrument ul li {
+        cursor: pointer;
+        border: 1px solid;
+        border-radius: 5px;
+        display: inline-block;
+        height: 150px;
+        line-height: 150px;
+        margin: 5px 5px 10px;
+        text-align: center;
+        width: 250px; }

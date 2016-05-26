@@ -57,81 +57,36 @@ wsServer.on('request', function(request) {
 
     console.log((new Date()) + ' Connection accepted.');
 
-
     // user sent some message
-    connection.on('message', function(message) {
-        console.log(clients.length);
-        if (message.type === 'utf8') { // accept only text
-                if (message.utf8Data === "a") {  //do
-                    for (var i=0; i < clients.length; i++) {
-                        clients[i].sendUTF("a");
-                    }
-                }
-                if (message.utf8Data === "s") {  //re
-                    for (var i=0; i < clients.length; i++) {
-                        clients[i].sendUTF("s");
-                    }
-                }
-                if (message.utf8Data === "d") {  ////mi
-                    for (var i=0; i < clients.length; i++) {
-                        clients[i].sendUTF("d");
-                    }
-                }
-                if (message.utf8Data === "f") {  //fa
-                    for (var i=0; i < clients.length; i++) {
-                        clients[i].sendUTF("f");
-                    }
-                }
-                if (message.utf8Data === "g") {  //sol
-                    for (var i=0; i < clients.length; i++) {
-                        clients[i].sendUTF("g");
-                    }
-                }
-                if (message.utf8Data === "h") {  //la
-                    for (var i=0; i < clients.length; i++) {
-                        clients[i].sendUTF("h");
-                    }
-                }
-                if (message.utf8Data === "j") {  //si
-                    for (var i=0; i < clients.length; i++) {
-                        clients[i].sendUTF("j");
-                    }
-                }
-
-                //bemoluri
-            if (message.utf8Data === "w") {  //doBem
-                for (var i=0; i < clients.length; i++) {
-                    clients[i].sendUTF("w");
-                }
-            }
-            if (message.utf8Data === "e") {  //reBem
-                for (var i=0; i < clients.length; i++) {
-                    clients[i].sendUTF("e");
-                }
-            }
-            if (message.utf8Data === "r") {  //faBem
-                for (var i=0; i < clients.length; i++) {
-                    clients[i].sendUTF("r");
-                }
-            }
-            if (message.utf8Data === "t") {  //solBem
-                for (var i=0; i < clients.length; i++) {
-                    clients[i].sendUTF("t");
-                }
-            }
-            if (message.utf8Data === "y") {  //laBem
-                for (var i=0; i < clients.length; i++) {
-                    clients[i].sendUTF("y");
-                }
-            }
-            //}
-        }
-    });
+    connection.on('message', listener);
 
     // user disconnected
     connection.on('close', function(connection) {
-            console.log(new Date() + " Peer " + connection.remoteAddress + " disconnected.");
-            clients.splice(index, 1);
+        console.log(new Date() + " Peer " + connection.remoteAddress + " disconnected.");
+        clients.splice(index, 1);
     });
-
 });
+
+function listener(request) {
+
+    console.log('Clients: ', clients.length);
+    console.log('Message', request);
+    if (request.type === 'utf8') { // accept only text
+
+        var message = request.utf8Data;
+        sendMessageToAll(message);
+    }
+}
+
+function sendMessageToAll(message) {
+    for (var i = 0; i < clients.length; i++) {
+        clients[i].sendUTF(message);
+    }
+}
+
+
+
+
+
+
+
