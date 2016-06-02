@@ -2,7 +2,7 @@ angular
     .module('SocketData.Service', [])
     .factory('socketDataService', socketDataService);
 
-function socketDataService($q, $rootScope) {
+function socketDataService($q, $rootScope, musicNotes) {
     
     // We return this object to anything injecting our service
     var Service = {};
@@ -25,6 +25,8 @@ function socketDataService($q, $rootScope) {
         };
         
         ws.onmessage = function(message) {
+            // listener(JSON.parse(message.data));
+            console.log('before parse', message);
             listener(JSON.parse(message.data));
         };
         return defer.promise;
@@ -46,14 +48,29 @@ function socketDataService($q, $rootScope) {
         return defer.promise;
     }
 
-    function listener(data) {
-        var messageObj = data;
-        console.log("Received data from websocket: ", messageObj);
-        // If an object exists with callback_id in our callbacks object, resolve it
-        if (callbacks.hasOwnProperty(messageObj.callback_id)) {
-            $rootScope.$apply(callbacks[messageObj.callback_id].cb.resolve(messageObj.data));
-            delete callbacks[messageObj.callbackID];
-        }
+    function sendData(request) {
+        console.log('Sending data', request);
+        ws.send(JSON.stringify(request));
+    }
+
+    // function listener(data) {
+    //     var messageObj = data;
+    //     console.log("Received data from websocket: ", messageObj);
+    //     // If an object exists with callback_id in our callbacks object, resolve it
+    //     if (callbacks.hasOwnProperty(messageObj.callback_id)) {
+    //         $rootScope.$apply(callbacks[messageObj.callback_id].cb.resolve(messageObj.data));
+    //         delete callbacks[messageObj.callbackID];
+    //     }
+    // }
+
+    function listener(message) {
+        console.log("Received data from websocket: ", message);
+        console.log(musicNotes[message.data]);
+        var sound = new Howl({
+            urls: [musicNotes[message.data]]
+        });
+        console.log(sound);
+        sound.play();
     }
 
     // This creates a new callback ID for a request
@@ -65,14 +82,17 @@ function socketDataService($q, $rootScope) {
         return currentCallbackId;
     }
 
-    // Define a "getter" for getting customer data
+    // Service.sendMessage = function(message) {
+    //     var request = {
+    //         data: message
+    //     };
+    //     // Storing in a variable for clarity on what sendRequest returns
+    //     var promise = sendRequest(request); 
+    //     return promise;
+    // }
+
     Service.sendMessage = function(message) {
-      var request = {
-        data: message
-      }
-      // Storing in a variable for clarity on what sendRequest returns
-      var promise = sendRequest(request); 
-      return promise;
+        return sendData({ data: message });
     }
 
     return Service;

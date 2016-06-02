@@ -8,11 +8,8 @@ function MusicBandCtrl($scope, socketDataService, $state) {
 
     // test socket
     var message = 'd';
-    socketDataService.sendMessage(message).then(function(res) {
-        $scope.musicalNote = res;
-        console.log('musicalNote:', $scope.musicalNote);
-    });
-
+    socketDataService.sendMessage(message);
+    
     function play(instrument) {
         console.log('Now playing the ', instrument, '!');
         $state.go('play');
