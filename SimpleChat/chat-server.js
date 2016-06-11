@@ -15,6 +15,7 @@ var http = require('http');
 
 // list of currently connected clients (users)
 var clients = [ ];
+var connectedUsers = [];
 
 /**
  * Helper function for escaping input strings
@@ -53,7 +54,10 @@ var wsServer = new webSocketServer({
 wsServer.on('request', function(request) {
     console.log((new Date()) + ' Connection from origin ' + request.origin + '.');
     var connection = request.accept(null, request.origin);
+    console.log(connection.remoteAddress);
     var index = clients.push(connection) - 1;
+
+    sendAlreadyConnectedUsers(connection);
 
     console.log((new Date()) + ' Connection accepted.');
 
@@ -69,19 +73,30 @@ wsServer.on('request', function(request) {
 
 function listener(request) {
 
-    console.log('Clients: ', clients.length);
-    console.log('Message', request);
     if (request.type === 'utf8') { // accept only text
-
-        var message = request.utf8Data;
-        sendMessageToAll(message);
+        var message = JSON.parse(request.utf8Data);
+        console.log(message);
+        console.log('typeof: ', typeof message.data);
+        if (typeof message.data === 'object' && message.data.user) {
+            console.log('user connected');
+            connectedUsers.push(message.data.user);
+        }
+        sendMessageToAll(JSON.stringify(message));
     }
 }
 
 function sendMessageToAll(message) {
+    console.log('Clients:', clients.length);
     for (var i = 0; i < clients.length; i++) {
         clients[i].sendUTF(message);
     }
+}
+
+function sendAlreadyConnectedUsers(client) {
+    console.log('sendAlreadyConnectedUsers ', connectedUsers, client.remoteAddress);
+    client.sendUTF(JSON.stringify({
+        connectedUsers: connectedUsers
+    }));
 }
 
 

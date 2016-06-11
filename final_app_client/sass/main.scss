@@ -124,3 +124,10 @@ p, label, span, input, button {
         }
     }
 }
+
+.right-sidebar {
+    float: right;
+    height: 100% !important;
+    width: 300px;
+    border-left: 2px solid $light-color;
+}

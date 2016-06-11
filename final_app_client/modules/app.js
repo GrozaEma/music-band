@@ -22,22 +22,22 @@ MB.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: '/modules/instruments/play.html',
             controller: 'PlayCtrl'
         })
-        .state('play.piano', {
+        .state('play-piano', {
             url: '/play/piano',
             templateUrl: '/modules/instruments/piano.html',
             controller: 'PianoCtrl'
         })
-        .state('play.guitar', {
+        .state('play-guitar', {
             url: '/play/guitar',
             templateUrl: '/modules/instruments/guitar.html',
             controller: 'GuitarCtrl'
         })
-        .state('play.drum', {
+        .state('play-drum', {
             url: '/play/drum',
             templateUrl: '/modules/instruments/drum.html',
             controller: 'DrumCtrl'
         })
-        .state('play.violin', {
+        .state('play-violin', {
             url: '/play/violin',
             templateUrl: '/modules/instruments/violin.html',
             controller: 'ViolinCtrl'

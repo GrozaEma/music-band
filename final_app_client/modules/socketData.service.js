@@ -2,10 +2,13 @@ angular
     .module('SocketData.Service', [])
     .factory('socketDataService', socketDataService);
 
-function socketDataService($q, $rootScope, musicNotes) {
-    
+function socketDataService($q, $rootScope, userService) {
+    var self = this;
+
     // We return this object to anything injecting our service
-    var Service = {};
+    var Service = {
+        listener: defaultListener
+    };
     
     // Keep all pending requests here until they get responses
     var callbacks = {};
@@ -27,7 +30,7 @@ function socketDataService($q, $rootScope, musicNotes) {
         ws.onmessage = function(message) {
             // listener(JSON.parse(message.data));
             console.log('before parse', message);
-            listener(JSON.parse(message.data));
+            Service.listener(JSON.parse(message.data));
         };
         return defer.promise;
     };
@@ -63,14 +66,14 @@ function socketDataService($q, $rootScope, musicNotes) {
     //     }
     // }
 
-    function listener(message) {
-        console.log("Received data from websocket: ", message);
-        console.log(musicNotes[message.data]);
-        var sound = new Howl({
-            urls: [musicNotes[message.data]]
-        });
-        console.log(sound);
-        sound.play();
+    function defaultListener(message) {
+        console.log("DEFAULT  Received data from websocket: ", message);
+
+        if (message.connectedUsers) {
+            console.log('connectedUsers: ', message.connectedUsers);
+            userService.users.concat(message.connectedUsers);
+            $rootScope.$apply();
+        }
     }
 
     // This creates a new callback ID for a request

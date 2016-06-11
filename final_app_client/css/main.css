@@ -76,3 +76,9 @@ p, label, span, input, button {
         margin: 5px 5px 10px;
         text-align: center;
         width: 250px; }
+
+.right-sidebar {
+  float: right;
+  height: 100% !important;
+  width: 300px;
+  border-left: 2px solid #F6F7F2; }
