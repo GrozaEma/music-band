@@ -80,5 +80,17 @@ p, label, span, input, button {
 .right-sidebar {
   float: right;
   height: 100% !important;
-  width: 300px;
+  width: 600px;
   border-left: 2px solid #F6F7F2; }
+  .right-sidebar ul {
+    list-style: outside none none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px; }
+    .right-sidebar ul li {
+      border: 1px solid;
+      border-radius: 5px;
+      height: 150px;
+      line-height: 150px;
+      margin: 5px 5px 10px;
+      width: 250px; }
