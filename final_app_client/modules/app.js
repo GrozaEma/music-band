@@ -21,27 +21,27 @@ MB.config(function($stateProvider, $urlRouterProvider) {
             url: '/play/:username/:instrument',
             templateUrl: '/modules/instruments/play.html',
             controller: 'PlayCtrl'
-        })
-        .state('play-piano', {
-            url: '/play/piano',
-            templateUrl: '/modules/instruments/piano.html',
-            controller: 'PianoCtrl'
-        })
-        .state('play-guitar', {
-            url: '/play/guitar',
-            templateUrl: '/modules/instruments/guitar.html',
-            controller: 'GuitarCtrl'
-        })
-        .state('play-drum', {
-            url: '/play/drum',
-            templateUrl: '/modules/instruments/drum.html',
-            controller: 'DrumCtrl'
-        })
-        .state('play-violin', {
-            url: '/play/violin',
-            templateUrl: '/modules/instruments/violin.html',
-            controller: 'ViolinCtrl'
         });
+        // .state('play-piano', {
+        //     url: '/play/piano',
+        //     templateUrl: '/modules/instruments/piano.html',
+        //     controller: 'PianoCtrl'
+        // })
+        // .state('play-guitar', {
+        //     url: '/play/guitar',
+        //     templateUrl: '/modules/instruments/guitar.html',
+        //     controller: 'GuitarCtrl'
+        // })
+        // .state('play-drum', {
+        //     url: '/play/drum',
+        //     templateUrl: '/modules/instruments/drum.html',
+        //     controller: 'DrumCtrl'
+        // })
+        // .state('play-violin', {
+        //     url: '/play/violin',
+        //     templateUrl: '/modules/instruments/violin.html',
+        //     controller: 'ViolinCtrl'
+        // });
 
     $urlRouterProvider.otherwise('/music-band');
 });

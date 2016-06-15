@@ -1,13 +1,24 @@
 <div class="page">
     <div class="wrapper">
+
         <div class="content-wrapper">
             <div class="content">
                 <h1>Content</h1>
                 <p>&larr; Responsive Width &rarr;</p>
 
                 <div>HELLO I am {{currentUser}} and I'm playing {{instrument}}</div>
+
+                <mb-piano ng-if="instrument === 'piano'"></mb-piano>
+
+                <mb-drum ng-if="instrument === 'drum'"></mb-drum>
+
+                <mb-violin ng-if="instrument === 'violin'"></mb-violin>
+
+                <mb-guitar ng-if="instrument === 'guitar'"></mb-guitar>
+
             </div>
         </div>
+
         <div class="sidebar">
             <h1>Users</h1>
             <ul ng-repeat="user in users track by $index">
@@ -17,5 +28,6 @@
                 </li>
             </ul>
         </div>
+
     </div>
 </div>
