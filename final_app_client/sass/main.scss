@@ -17,6 +17,7 @@ body, * {
 body {
     background-color: $background-color;
     color: $accent-color;
+    text-align: center;
 }
 
 h1 {
@@ -172,7 +173,8 @@ p, label, span, input, button {
 // }
 
 .page {
-    margin: 20px 0
+    margin: 20px 0;
+    color: $light-color;
 }
 
 .wrapper {
@@ -184,16 +186,19 @@ p, label, span, input, button {
 }
 
 .content-wrapper {
-    background-color: $accent-color;
     float: left;
     width: 100%;
 }
 
 .content {    
-    margin-right: 320px;
+    margin-right: 330px;
     clear: both;
     overflow: auto;
     min-height: 600px;
+
+    background-color: $accent-color;
+    border-radius: 20px;
+    border: 3px solid $light-color;
 }
 
 .sidebar {
@@ -206,11 +211,14 @@ p, label, span, input, button {
     float: right;
     overflow: hidden;
     min-height: 600px;
+    margin-top: -606px;
+
     ul {
         list-style: outside none none;
-        width: 600px;
-        float: center;
         li {
+            span {
+                display: block;
+            }
             img {
                 border: 3px solid $light-color;
                 border-radius: 20px;

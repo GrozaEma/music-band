@@ -8,7 +8,8 @@ body, * {
 
 body {
   background-color: #E6DCDB;
-  color: #7E3661; }
+  color: #7E3661;
+  text-align: center; }
 
 h1 {
   font-size: 30px;
@@ -78,7 +79,8 @@ p, label, span, input, button {
         width: 250px; }
 
 .page {
-  margin: 20px 0; }
+  margin: 20px 0;
+  color: #F6F7F2; }
 
 .wrapper {
   max-width: 1160px;
@@ -88,15 +90,17 @@ p, label, span, input, button {
   min-height: 600px; }
 
 .content-wrapper {
-  background-color: #7E3661;
   float: left;
   width: 100%; }
 
 .content {
-  margin-right: 320px;
+  margin-right: 330px;
   clear: both;
   overflow: auto;
-  min-height: 600px; }
+  min-height: 600px;
+  background-color: #7E3661;
+  border-radius: 20px;
+  border: 3px solid #F6F7F2; }
 
 .sidebar {
   background-color: #7E3661;
@@ -107,11 +111,12 @@ p, label, span, input, button {
   margin-left: -320px;
   float: right;
   overflow: hidden;
-  min-height: 600px; }
+  min-height: 600px;
+  margin-top: -606px; }
   .sidebar ul {
-    list-style: outside none none;
-    width: 600px;
-    float: center; }
+    list-style: outside none none; }
+    .sidebar ul li span {
+      display: block; }
     .sidebar ul li img {
       border: 3px solid #F6F7F2;
       border-radius: 20px;

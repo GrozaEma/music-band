@@ -15,16 +15,19 @@
 <div class="page">
     <div class="wrapper">
         <div class="content-wrapper">
-            <div class="content-inner">
+            <div class="content">
                 <h1>Content</h1>
+                <p>&larr; Responsive Width &rarr;</p>
             </div>
         </div>
         <div class="sidebar">
-            <h2>Page sidebar</h2>
-            Users:
+            <h1>Users</h1>
             <ul ng-repeat="user in users track by $index">
-                {{user.name}}<li><img src="../../assets/{{user.instrument}}.jpg"></li>
+                <li>
+                    <span>{{user.name}}</span>
+                    <img src="../../assets/{{user.instrument}}.jpg">
+                </li>
             </ul>
         </div>
-    S</div>
+    </div>
 </div>
