@@ -56,6 +56,9 @@ function MusicBandCtrl($rootScope, $scope, socketDataService, $state, musicNotes
         socketDataService.sendMessage(msg);
 
         console.log('Now playing the ', instrument, '!');
-        $state.go('play');
+        $state.go('play', {
+            username: $scope.userName,
+            instrument: $scope.instrument
+        });
     }
 }

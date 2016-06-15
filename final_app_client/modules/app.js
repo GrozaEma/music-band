@@ -18,7 +18,7 @@ MB.config(function($stateProvider, $urlRouterProvider) {
             controller: 'MusicBandCtrl'
         })
         .state('play', {
-            url: '/play',
+            url: '/play/:username/:instrument',
             templateUrl: '/modules/instruments/play.html',
             controller: 'PlayCtrl'
         })
