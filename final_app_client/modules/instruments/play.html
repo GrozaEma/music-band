@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="main-content"> current instrument playing
 
 </div>
@@ -9,4 +9,22 @@
         {{user.name}}<li><img src="../../assets/{{user.instrument}}.jpg"></li>
 
     </ul>
+</div>
+ -->
+
+<div class="page">
+    <div class="wrapper">
+        <div class="content-wrapper">
+            <div class="content-inner">
+                <h1>Content</h1>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h2>Page sidebar</h2>
+            Users:
+            <ul ng-repeat="user in users track by $index">
+                {{user.name}}<li><img src="../../assets/{{user.instrument}}.jpg"></li>
+            </ul>
+        </div>
+    S</div>
 </div>
