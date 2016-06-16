@@ -87,7 +87,7 @@ p, label, span, input, button {
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
-  min-height: 600px; }
+  min-height: 700px; }
 
 .content-wrapper {
   float: left;
@@ -97,7 +97,7 @@ p, label, span, input, button {
   margin-right: 330px;
   clear: both;
   overflow: auto;
-  min-height: 600px;
+  min-height: 700px;
   background-color: #7E3661;
   border-radius: 20px;
   border: 3px solid #F6F7F2; }
@@ -111,8 +111,8 @@ p, label, span, input, button {
   margin-left: -320px;
   float: right;
   overflow: hidden;
-  min-height: 600px;
-  margin-top: -606px; }
+  min-height: 700px;
+  margin-top: -706px; }
   .sidebar ul {
     list-style: outside none none; }
     .sidebar ul li span {

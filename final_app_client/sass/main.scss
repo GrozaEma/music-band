@@ -2,6 +2,7 @@ $background-color: #E6DCDB;
 
 $accent-color: #7E3661;
 $light-color: #F6F7F2;
+$min-height: 700px;
 
 %font-definition {
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;    
@@ -126,51 +127,7 @@ p, label, span, input, button {
     }
 }
 
-// .right-sidebar {
-//     background-color: $accent-color;
-//     border: 3px solid $light-color;
-//     border-radius: 20px;
-//     color: $light-color;
-//     padding: 30px 0;
-//     margin-right: 150px;
-//     margin-top: 50px;
-//     margin-bottom: 50px;
-//     float: right;
-//     height: 700px;
-//     width: 400px;
-//     ul {
-//         list-style: outside none none;
-//         // margin-left: auto;
-//         // margin-right: auto;
-//         width: 600px;
-//         float: center;
-//         li {
-//             img {
-//                 border: 3px solid $light-color;
-//                 border-radius: 20px;
-//                 display: inline-block;
-//                 height: 150px;
-//                 line-height: 150px;
-//                 margin: 5px 5px 10px;
-//                 width: 250px;
-//             }
-//         }
-//     }
-// }
 
-// .main-content {
-//     background-color: $accent-color;
-//     border: 3px solid $light-color;
-//     border-radius: 20px;
-//     color: $light-color;
-//     padding: 30px 0;
-//     float: left;
-//     height: 700px;
-//     width: 1000px;
-//     margin-left: 150px;
-//     margin-top: 50px;
-//     margin-bottom: 50px;
-// }
 
 .page {
     margin: 20px 0;
@@ -182,7 +139,7 @@ p, label, span, input, button {
     margin: 0 auto;
     position: relative;
     padding: 0 20px;
-    min-height: 600px;
+    min-height: $min-height;
 }
 
 .content-wrapper {
@@ -194,7 +151,7 @@ p, label, span, input, button {
     margin-right: 330px;
     clear: both;
     overflow: auto;
-    min-height: 600px;
+    min-height: $min-height;
 
     background-color: $accent-color;
     border-radius: 20px;
@@ -210,8 +167,8 @@ p, label, span, input, button {
     margin-left: -320px;
     float: right;
     overflow: hidden;
-    min-height: 600px;
-    margin-top: -606px;
+    min-height: $min-height;
+    margin-top: -706px;
 
     ul {
         list-style: outside none none;
