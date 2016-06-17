@@ -6,7 +6,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('build-sass', function() {
-    gulp.src('sass/**/*.scss')
+    gulp.src('sass/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css/'))
 });
