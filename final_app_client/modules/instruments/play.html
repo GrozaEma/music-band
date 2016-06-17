@@ -8,13 +8,13 @@
 
                 <div>HELLO I am {{currentUser}} and I'm playing {{instrument}}</div>
 
-                <mb-piano ng-if="instrument === 'piano'"></mb-piano>
+                <mb-piano ng-if="instrument === 'piano'" keyboard="playNote"></mb-piano>
 
-                <mb-drum ng-if="instrument === 'drum'"></mb-drum>
+                <mb-drum ng-if="instrument === 'drum'" keyboard="playNote"></mb-drum>
 
-                <mb-violin ng-if="instrument === 'violin'"></mb-violin>
+                <mb-violin ng-if="instrument === 'violin'" keyboard="playNote"></mb-violin>
 
-                <mb-guitar ng-if="instrument === 'guitar'"></mb-guitar>
+                <mb-guitar ng-if="instrument === 'guitar'" keyboard="playNote"></mb-guitar>
 
             </div>
         </div>

@@ -3,9 +3,21 @@ angular
     .factory('musicNotes', musicNotes);
 
 function musicNotes() {
-    var notes = {
-        'd': 'assets/do.wav'
+    var service = {
+        'd': 'assets/do.wav',
+        piano: {
+            65: 'assets/do.wav'
+        }
     };
 
-    return notes;
+    service.playMusicNote = playMusicNote;
+
+    function playMusicNote(instrument, keyCode) {
+        var sound = new Howl({
+            urls: [service[instrument][keyCode]]
+        });
+        sound.play();
+    }
+
+    return service;
 }
