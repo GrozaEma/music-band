@@ -1,0 +1,301 @@
+/* line 3, ../sass/drum.scss */
+body {
+  background: #f1f1f1;
+}
+
+/* drum */
+/* <---- THIS PARAMETER CONTROLS EVERYTHING */
+/* circle */
+/* thick */
+/* box shadow */
+/* links */
+/* stick */
+/* stick shadow */
+/* wrapper */
+/* animation length */
+/* line 44, ../sass/drum.scss */
+.drum-wrapper {
+  width: 30em;
+  height: 20em;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 51, ../sass/drum.scss */
+.drum {
+  width: 15em;
+  height: 10em;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+
+/* line 59, ../sass/drum.scss */
+.circle {
+  width: 15em;
+  height: 5em;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* line 66, ../sass/drum.scss */
+.c1 {
+  top: 5em;
+  background: linear-gradient(to right, #b2b2b2 0%, #808080 12%, #808080 36%, #8e8e8e 40%, #808080 44%, #808080 50%, #808080 56%, #8e8e8e 60%, #808080 64%, #808080 88%, #b2b2b2 100%);
+  box-shadow: 0 0 0.33333em #424242 inset;
+}
+
+/* line 72, ../sass/drum.scss */
+.c2 {
+  top: 4.16667em;
+  background: linear-gradient(to right, #6573ed 0%, #2d40ef 12%, #2d40ef 36%, #3446ed 40%, #2d40ef 44%, #2d40ef 50%, #2d40ef 56%, #3446ed 60%, #2d40ef 64%, #2d40ef 88%, #6573ed 100%);
+  box-shadow: 0 0.16667em 0.16667em #424242;
+}
+
+/* line 78, ../sass/drum.scss */
+.c3 {
+  top: 0.83333em;
+  background: linear-gradient(to right, #b2b2b2 0%, #808080 12%, #808080 36%, #8e8e8e 40%, #808080 44%, #808080 50%, #808080 56%, #8e8e8e 60%, #808080 64%, #808080 88%, #b2b2b2 100%);
+  box-shadow: 0 0 0.33333em #424242 inset;
+}
+
+/* line 84, ../sass/drum.scss */
+.c4 {
+  top: 0;
+  background: gray;
+  box-sizing: border-box;
+  border: 1px solid #424242;
+  box-shadow: 0 0.16667em 0.16667em #424242;
+}
+/* line 91, ../sass/drum.scss */
+.c4:before {
+  content: '';
+  display: block;
+  width: 95%;
+  height: 90%;
+  border-radius: 50%;
+  margin-left: 2.5%;
+  margin-top: 1.75%;
+  background: silver;
+}
+
+/* line 103, ../sass/drum.scss */
+.thick {
+  width: 15em;
+  height: 0.83333em;
+  position: absolute;
+}
+
+/* line 109, ../sass/drum.scss */
+.t1 {
+  top: 6.66667em;
+  background: linear-gradient(to right, #b2b2b2 0%, #808080 12%, #808080 36%, #8e8e8e 40%, #808080 44%, #808080 50%, #808080 56%, #8e8e8e 60%, #808080 64%, #808080 88%, #b2b2b2 100%);
+}
+
+/* line 114, ../sass/drum.scss */
+.t2 {
+  height: 4.16667em;
+  top: 2.5em;
+  background: linear-gradient(to right, #6573ed 0%, #2d40ef 12%, #2d40ef 36%, #3446ed 40%, #2d40ef 44%, #2d40ef 50%, #2d40ef 56%, #3446ed 60%, #2d40ef 64%, #2d40ef 88%, #6573ed 100%);
+}
+
+/* line 120, ../sass/drum.scss */
+.t3 {
+  top: 2.5em;
+  background: linear-gradient(to right, #b2b2b2 0%, #808080 12%, #808080 36%, #8e8e8e 40%, #808080 44%, #808080 50%, #808080 56%, #8e8e8e 60%, #808080 64%, #808080 88%, #b2b2b2 100%);
+}
+
+/* line 125, ../sass/drum.scss */
+.link {
+  width: 0.375em;
+  height: 4.16667em;
+  position: absolute;
+  background: gray;
+  box-shadow: 0 0 0.16667em black;
+}
+/* line 132, ../sass/drum.scss */
+.link:before {
+  width: 200%;
+  height: 40%;
+  position: absolute;
+  left: -50%;
+  top: 30%;
+  content: '';
+  background: gray;
+  box-shadow: 0 0 0.16667em black;
+}
+/* line 143, ../sass/drum.scss */
+.link:nth-child(1) {
+  top: 5.41667em;
+  left: 7.3125em;
+}
+/* line 148, ../sass/drum.scss */
+.link:nth-child(2) {
+  transform: skewY(-10deg);
+  top: 5.25em;
+  left: 10.6125em;
+}
+/* line 154, ../sass/drum.scss */
+.link:nth-child(3) {
+  transform: scaleX(0.75) skewY(-25deg);
+  top: 4.25em;
+  left: 13.6125em;
+  box-shadow: 0 0 0.08333em black;
+}
+/* line 161, ../sass/drum.scss */
+.link:nth-child(4) {
+  transform: skewY(10deg);
+  top: 5.25em;
+  left: 4.0125em;
+}
+/* line 167, ../sass/drum.scss */
+.link:nth-child(5) {
+  transform: scaleX(0.75) skewY(25deg);
+  top: 4.25em;
+  left: 1.0125em;
+  box-shadow: 0 0 0.08333em black;
+}
+
+/* line 175, ../sass/drum.scss */
+#drumstick-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 181, ../sass/drum.scss */
+.drumstick {
+  position: absolute;
+  width: 13.5em;
+  height: 0.5em;
+  background: linear-gradient(to bottom, #845925 0%, #82684b 35%, #b2884c 60%, #82684b 83%, #845925 100%);
+  margin: 0 auto;
+  top: 7.2533em;
+}
+/* line 189, ../sass/drum.scss */
+.drumstick:before {
+  width: 7.5%;
+  height: 150%;
+  border-radius: 50%;
+  position: absolute;
+  top: -25%;
+  left: 95%;
+  content: '';
+  background: radial-gradient(ellipse at center, #997a54 1%, #826341 35%, #826341 60%, #82684b 83%, #845925 100%);
+  box-shadow: 0 0 0.16667em black inset;
+}
+/* line 201, ../sass/drum.scss */
+.drumstick:nth-child(1) {
+  left: 0;
+  transform: rotate(45deg);
+  -webkit-animation: stickLeft 0.75s ease-in-out infinite;
+  animation: stickLeft 0.75s ease-in-out infinite;
+}
+/* line 208, ../sass/drum.scss */
+.drumstick:nth-child(2) {
+  left: 16.5em;
+  transform: rotate(135deg);
+  -webkit-animation: stickRight 0.75s ease-in-out infinite;
+  -webkit-animation-delay: 0.375s;
+  animation: stickRight 0.75s ease-in-out infinite;
+  animation-delay: 0.375s;
+}
+
+/* line 218, ../sass/drum.scss */
+#shadow-stick-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 226, ../sass/drum.scss */
+.shadow {
+  width: 3em;
+  height: 1.5em;
+  position: absolute;
+  top: 1.75em;
+  border-radius: 50%;
+  opacity: 0.75;
+  background: radial-gradient(ellipse at center, #000000 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+  -webkit-animation: shadowAnim 0.75s ease-in-out infinite;
+  animation: shadowAnim 0.75s ease-in-out infinite;
+}
+/* line 237, ../sass/drum.scss */
+.shadow:nth-child(1) {
+  left: 2.55em;
+}
+/* line 241, ../sass/drum.scss */
+.shadow:nth-child(2) {
+  left: 9.45em;
+  -webkit-animation-delay: 0.375s;
+  animation-delay: 0.375s;
+}
+
+@-webkit-keyframes stickLeft {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes stickLeft {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes shadowAnim {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes shadowAnim {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes stickRight {
+  0% {
+    transform: rotate(135deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+@keyframes stickRight {
+  0% {
+    transform: rotate(135deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}

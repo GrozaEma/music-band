@@ -1,4 +1,5 @@
 /* Piano Wrapper */
+/* line 2, ../sass/piano.scss */
 #p-wrapper {
   background: -webkit-linear-gradient(-60deg, #000, #333, #000, #666, #333 70%);
   background: -moz-linear-gradient(-60deg, #000, #333, #000, #666, #333 70%);
@@ -14,22 +15,28 @@
   -webkit-border-radius: 0 0 5px 5px;
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* Tuts */
+/* line 21, ../sass/piano.scss */
 ul#piano {
   display: block;
   max-width: 840;
-  height: 440px; }
+  height: 440px;
+}
 
+/* line 29, ../sass/piano.scss */
 ul#piano li {
   list-style: none;
   float: left;
   display: inline;
   background: #aaa;
   width: 40px;
-  position: relative; }
+  position: relative;
+}
 
+/* line 38, ../sass/piano.scss */
 ul#piano li a, ul#piano li div.anchor {
   display: block;
   height: 220px;
@@ -45,16 +52,20 @@ ul#piano li a, ul#piano li div.anchor {
   box-shadow: inset 0 1px 0px #fff, inset 0 -1px 0px #fff, inset 1px 0px 0px #fff, inset -1px 0px 0px #fff, 0 4px 3px rgba(0, 0, 0, 0.7);
   -webkit-border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px; }
+  border-radius: 0 0 3px 3px;
+}
 
+/* line 56, ../sass/piano.scss */
 ul#piano li a:active, ul#piano li div.anchor:active {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   position: relative;
   top: 2px;
-  height: 216px; }
+  height: 216px;
+}
 
+/* line 65, ../sass/piano.scss */
 ul#piano li a:active:before, ul#piano li div.anchor:active:before {
   content: "";
   width: 0px;
@@ -64,8 +75,10 @@ ul#piano li a:active:before, ul#piano li div.anchor:active:before {
   border-color: transparent transparent transparent rgba(0, 0, 0, 0.1);
   position: absolute;
   left: 0px;
-  top: 0px; }
+  top: 0px;
+}
 
+/* line 77, ../sass/piano.scss */
 ul#piano li a:active:after, ul#piano li div.anchor:active:after {
   content: "";
   width: 0px;
@@ -75,9 +88,11 @@ ul#piano li a:active:after, ul#piano li div.anchor:active:after {
   border-color: transparent rgba(0, 0, 0, 0.1) transparent transparent;
   position: absolute;
   right: 0px;
-  top: 0px; }
+  top: 0px;
+}
 
 /* Black Tuts */
+/* line 90, ../sass/piano.scss */
 ul#piano li span {
   position: absolute;
   top: 0px;
@@ -99,16 +114,20 @@ ul#piano li span {
   box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.4), 0 2px 3px rgba(0, 0, 0, 0.4);
   -webkit-border-radius: 0 0 2px 2px;
   -moz-border-radius: 0 0 2px 2px;
-  border-radius: 0 0 2px 2px; }
+  border-radius: 0 0 2px 2px;
+}
 
+/* line 114, ../sass/piano.scss */
 ul#piano li span:active {
   border-bottom-width: 2px;
   height: 123px;
   -webkit-box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000;
   -moz-box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000;
-  box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000; }
+  box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000;
+}
 
 /* Tooltips */
+/* line 123, ../sass/piano.scss */
 ul#piano li b {
   position: absolute;
   top: 0px;
@@ -134,9 +153,11 @@ ul#piano li b {
   -moz-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
-  -transition: all 0.2s ease-out; }
+  -transition: all 0.2s ease-out;
+}
 
 /* Tooltip Arrow */
+/* line 152, ../sass/piano.scss */
 ul#piano li b:before {
   content: "";
   display: block;
@@ -145,8 +166,10 @@ ul#piano li b:before {
   left: 50px;
   border-width: 8px;
   border-style: solid;
-  border-color: #e6e6e6 transparent transparent transparent; }
+  border-color: #e6e6e6 transparent transparent transparent;
+}
 
+/* line 163, ../sass/piano.scss */
 ul#piano li b:after {
   content: "";
   display: block;
@@ -155,14 +178,18 @@ ul#piano li b:after {
   left: 53px;
   border-width: 5px;
   border-style: solid;
-  border-color: #111 transparent transparent transparent; }
+  border-color: #111 transparent transparent transparent;
+}
 
+/* line 174, ../sass/piano.scss */
 ul#piano li:hover b {
   visibility: visible;
   opacity: 1;
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
 /* Drop Down Menus */
+/* line 181, ../sass/piano.scss */
 ul#piano li ul, #search, #contact {
   position: absolute;
   border: 2px solid #e6e6e6;
@@ -179,15 +206,19 @@ ul#piano li ul, #search, #contact {
   -moz-transition: all 0.2s ease-out 0.2s;
   -ms-transition: all 0.2s ease-out 0.2s;
   -o-transition: all 0.2s ease-out 0.2s;
-  transition: all 0.2s ease-out 0.2s; }
+  transition: all 0.2s ease-out 0.2s;
+}
 
+/* line 200, ../sass/piano.scss */
 ul#piano li li {
   width: 150px;
   height: auto;
   display: block;
   float: none;
-  background: transparent; }
+  background: transparent;
+}
 
+/* line 208, ../sass/piano.scss */
 ul#piano li li a, ul#piano li li a:active {
   height: auto;
   display: block;
@@ -206,132 +237,281 @@ ul#piano li li a, ul#piano li li a:active {
   border-style: solid;
   border-color: #444 transparent #222 transparent;
   top: 0px;
-  margin-top: 0px; }
+  margin-top: 0px;
+}
 
+/* line 229, ../sass/piano.scss */
 ul#piano li li a:active:before, ul#piano li li a:active:after {
-  border: none !important; }
+  border: none !important;
+}
 
+/* line 233, ../sass/piano.scss */
 ul#piano li:hover ul, ul#piano li:hover #search, ul#piano li:hover #contact {
   visibility: visible;
   opacity: 1;
-  margin-top: 15px; }
+  margin-top: 15px;
+}
 
+/* line 239, ../sass/piano.scss */
 ul#piano li li a:hover {
   background: #111;
   border-top-color: #222;
-  border-bottom-color: #000; }
+  border-bottom-color: #000;
+}
 
+/* line 246, ../sass/piano.scss */
 .clear {
-  clear: both; }
+  clear: both;
+}
 
-img {
-  width: 800px;
-  height: 800px; }
+/* boilerplate styles from... */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+/* HTML5 Boilerplate */
+/* line 5, ../sass/guitar.scss */
+* {
+  margin: 0;
+  padding: 0;
+  /*border: 0;*/
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
-.div {
-  display: block;
-  max-width: 840px;
-  height: 440px; }
+/* line 13, ../sass/guitar.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
-img {
-  width: 600px;
-  height: 400px; }
+/* line 18, ../sass/guitar.scss */
+label, input {
+  font-size: 3em;
+  margin: 1em;
+}
 
+/* line 23, ../sass/guitar.scss */
+label {
+  margin: 1em .2em;
+}
+
+/* line 27, ../sass/guitar.scss */
+.fretboard {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  /*background:#333333;*/
+}
+
+/* line 34, ../sass/guitar.scss */
+.note {
+  position: absolute;
+  /*background:#333333;*/
+  height: 30px;
+  /*border:1px solid #aaaaaa;*/
+  box-sizing: border-box;
+  color: #369;
+  /*-webkit-transform:translateZ(1px);*/
+}
+
+/* line 44, ../sass/guitar.scss */
+.fret {
+  position: absolute;
+  height: 100%;
+  background: #333333;
+  border-right: 3px solid #676767;
+  box-sizing: border-box;
+}
+
+/* line 52, ../sass/guitar.scss */
+.fret[data-fret="0"], .note[data-fret="0"] {
+  background: transparent;
+}
+
+/* line 56, ../sass/guitar.scss */
+.fret[data-fret="3"]:after, .fret[data-fret="5"]:after, .fret[data-fret="7"]:after, .fret[data-fret="9"]:after, .fret[data-fret="12"]:after,
+.fret[data-fret="15"]:after, .fret[data-fret="17"]:after, .fret[data-fret="19"]:after, .fret[data-fret="21"]:after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  margin: -2px 0 0 -2px;
+  background: #aaaaaa;
+  top: 50%;
+  left: 50%;
+}
+
+/* line 69, ../sass/guitar.scss */
+.string {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  margin-top: 15px;
+  background: #cc9500;
+}
+
+/* line 77, ../sass/guitar.scss */
+.note.active {
+  z-index: 100;
+}
+
+/* line 81, ../sass/guitar.scss */
+.note.active:after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  margin: -6px 0 0 -6px;
+  background: #33aa11;
+  top: 50%;
+  left: 50%;
+}
+
+/* line 93, ../sass/guitar.scss */
+.note[data-fret="0"].active:after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  margin: -6px 0 0 -6px;
+  box-sizing: border-box;
+  background: transparent;
+  border: 2px solid #000000;
+  top: 50%;
+  left: 50%;
+}
+
+/* line 9, ../sass/main.scss */
 body, *, h1, h3, p, label, span, input, button, .container .music-form .username input {
   font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
-  font-style: normal; }
+  font-style: normal;
+}
 
+/* line 14, ../sass/main.scss */
 body, * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
+/* line 20, ../sass/main.scss */
 body {
   background-color: #E6DCDB;
   color: #7E3661;
-  text-align: center; }
+  text-align: center;
+}
 
+/* line 26, ../sass/main.scss */
 h1 {
   font-size: 30px;
   font-variant: small-caps;
   font-weight: 400;
-  line-height: 60px; }
+  line-height: 60px;
+}
 
+/* line 34, ../sass/main.scss */
 h3 {
   font-size: 18px;
   font-variant: normal;
   font-weight: 500;
-  line-height: 15.4px; }
+  line-height: 15.4px;
+}
 
+/* line 42, ../sass/main.scss */
 p, label, span, input, button {
   font-size: 20px;
   font-variant: normal;
   font-weight: 400;
-  line-height: 20px; }
+  line-height: 20px;
+}
 
+/* line 50, ../sass/main.scss */
 .container .music-form .instrument ul {
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
+/* line 54, ../sass/main.scss */
 .container .music-form .username, .container .music-form .username input {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+}
 
+/* line 69, ../sass/main.scss */
 .container {
   margin-left: auto;
   margin-right: auto;
   padding: 45px;
   text-align: center;
-  width: 1170px; }
-  .container .music-form {
-    background-color: #7E3661;
-    border: 3px solid #F6F7F2;
-    border-radius: 20px;
-    color: #F6F7F2;
-    padding: 30px 0; }
-    .container .music-form .username input {
-      display: block; }
-    .container .music-form .username input {
-      background: none;
-      border: 0;
-      border-bottom: 2px solid #F6F7F2;
-      box-sizing: border-box;
-      color: #F6F7F2;
-      margin-left: auto;
-      margin-right: auto;
-      outline: none;
-      padding: 10px;
-      resize: none;
-      text-align: center;
-      width: 300px; }
-    .container .music-form .instrument ul {
-      list-style: outside none none;
-      margin-left: auto;
-      margin-right: auto;
-      width: 600px; }
-      .container .music-form .instrument ul li {
-        cursor: pointer;
-        border: 1px solid;
-        border-radius: 5px;
-        display: inline-block;
-        height: 150px;
-        line-height: 150px;
-        margin: 5px 5px 10px;
-        text-align: center;
-        width: 250px; }
+  width: 1170px;
+}
+/* line 76, ../sass/main.scss */
+.container .music-form {
+  background-color: #7E3661;
+  border: 3px solid #F6F7F2;
+  border-radius: 20px;
+  color: #F6F7F2;
+  padding: 30px 0;
+}
+/* line 86, ../sass/main.scss */
+.container .music-form .username input {
+  display: block;
+}
+/* line 91, ../sass/main.scss */
+.container .music-form .username input {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #F6F7F2;
+  box-sizing: border-box;
+  color: #F6F7F2;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+  padding: 10px;
+  resize: none;
+  text-align: center;
+  width: 300px;
+}
+/* line 109, ../sass/main.scss */
+.container .music-form .instrument ul {
+  list-style: outside none none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+/* line 116, ../sass/main.scss */
+.container .music-form .instrument ul li {
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 5px;
+  display: inline-block;
+  height: 150px;
+  line-height: 150px;
+  margin: 5px 5px 10px;
+  text-align: center;
+  width: 250px;
+}
 
+/* line 134, ../sass/main.scss */
 .page {
   margin: 20px 0;
-  color: #F6F7F2; }
+  color: #F6F7F2;
+}
 
+/* line 139, ../sass/main.scss */
 .wrapper {
   max-width: 1160px;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
-  min-height: 700px; }
+  min-height: 700px;
+}
 
+/* line 147, ../sass/main.scss */
 .content-wrapper {
   float: left;
-  width: 100%; }
+  width: 100%;
+}
 
+/* line 152, ../sass/main.scss */
 .content {
   margin-right: 330px;
   clear: both;
@@ -339,8 +519,10 @@ p, label, span, input, button {
   min-height: 700px;
   background-color: #7E3661;
   border-radius: 20px;
-  border: 3px solid #F6F7F2; }
+  border: 3px solid #F6F7F2;
+}
 
+/* line 163, ../sass/main.scss */
 .sidebar {
   background-color: #7E3661;
   border: 3px solid #F6F7F2;
@@ -351,16 +533,23 @@ p, label, span, input, button {
   float: right;
   overflow: hidden;
   min-height: 700px;
-  margin-top: -706px; }
-  .sidebar ul {
-    list-style: outside none none; }
-    .sidebar ul li span {
-      display: block; }
-    .sidebar ul li img {
-      border: 3px solid #F6F7F2;
-      border-radius: 20px;
-      display: inline-block;
-      height: 150px;
-      line-height: 150px;
-      margin: 5px 5px 10px;
-      width: 250px; }
+  margin-top: -706px;
+}
+/* line 175, ../sass/main.scss */
+.sidebar ul {
+  list-style: outside none none;
+}
+/* line 178, ../sass/main.scss */
+.sidebar ul li span {
+  display: block;
+}
+/* line 181, ../sass/main.scss */
+.sidebar ul li img {
+  border: 3px solid #F6F7F2;
+  border-radius: 20px;
+  display: inline-block;
+  height: 150px;
+  line-height: 150px;
+  margin: 5px 5px 10px;
+  width: 250px;
+}
