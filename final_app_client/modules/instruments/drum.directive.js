@@ -8,7 +8,6 @@ function mbDrum() {
         restrict: "EA",
         templateUrl: "/modules/instruments/drum.html",
         link: function(scope) {
-
         }
     };
 }
