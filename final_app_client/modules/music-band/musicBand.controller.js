@@ -14,21 +14,17 @@ function MusicBandCtrl($rootScope, $scope, socketDataService, $state, musicNotes
     var message = 'd';
     socketDataService.sendMessage(message, 'sound');
 
-    // $scope.$rootScope('userService.users.length', function() {
-    //     console.info('WATCH MB.CTRL: ', userService.users);
-    // });
-
 
     function socketListener(message) {
         console.log("Received data from websocket: ", message);
         if (message.user) {
             // show user
             console.log('USER: ', message.user);
-            // if (message.name !== $scope.userName) {
+            if (message.user.name !== $scope.userName) {
                 // new user - display instrument
                 userService.users.push(message.user);
                 $rootScope.$apply();
-            // }
+            }
         } else if (message.sound) {
             playMusicSound(message.sound);
         }

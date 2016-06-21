@@ -112,15 +112,22 @@ p, label, span, input, button {
                 width: 600px;
 
                 li {
-                    cursor: pointer;
-                    border: 1px solid;
-                    border-radius: 5px;
                     display: inline-block;
                     height: 150px;
                     line-height: 150px;
                     margin: 5px 5px 10px;
-                    text-align: center;
                     width: 250px;
+                    img {
+                        cursor: pointer;
+                        border: 1px solid;
+                        border-radius: 5px;
+                        display: inline-block;
+                        height: 150px;
+                        line-height: 150px;
+                        margin: 5px 5px 10px;
+                        text-align: center;
+                        width: 250px;
+                    }
                 }
             }
         }

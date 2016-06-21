@@ -68,15 +68,21 @@ p, label, span, input, button {
       margin-right: auto;
       width: 600px; }
       .container .music-form .instrument ul li {
-        cursor: pointer;
-        border: 1px solid;
-        border-radius: 5px;
         display: inline-block;
         height: 150px;
         line-height: 150px;
         margin: 5px 5px 10px;
-        text-align: center;
         width: 250px; }
+        .container .music-form .instrument ul li img {
+          cursor: pointer;
+          border: 1px solid;
+          border-radius: 5px;
+          display: inline-block;
+          height: 150px;
+          line-height: 150px;
+          margin: 5px 5px 10px;
+          text-align: center;
+          width: 250px; }
 
 .page {
   margin: 20px 0;

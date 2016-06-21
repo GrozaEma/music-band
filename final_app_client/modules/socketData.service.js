@@ -21,6 +21,7 @@ function socketDataService($q, $rootScope, userService) {
         var defer = $q.defer();
         // Create our websocket object with the address to the websocket
         ws = new WebSocket('ws://127.0.0.1:1337');
+        // ws = new WebSocket('ws://192:168:0.14:1337');
 
         ws.onopen = function(){  
             console.log("Socket has been opened!");
@@ -56,16 +57,6 @@ function socketDataService($q, $rootScope, userService) {
         ws.send(JSON.stringify(request));
     }
 
-    // function listener(data) {
-    //     var messageObj = data;
-    //     console.log("Received data from websocket: ", messageObj);
-    //     // If an object exists with callback_id in our callbacks object, resolve it
-    //     if (callbacks.hasOwnProperty(messageObj.callback_id)) {
-    //         $rootScope.$apply(callbacks[messageObj.callback_id].cb.resolve(messageObj.data));
-    //         delete callbacks[messageObj.callbackID];
-    //     }
-    // }
-
     function defaultListener(message) {
         console.log("DEFAULT  Received data from websocket: ", message);
 
@@ -84,15 +75,6 @@ function socketDataService($q, $rootScope, userService) {
         }
         return currentCallbackId;
     }
-
-    // Service.sendMessage = function(message) {
-    //     var request = {
-    //         data: message
-    //     };
-    //     // Storing in a variable for clarity on what sendRequest returns
-    //     var promise = sendRequest(request); 
-    //     return promise;
-    // }
 
     Service.sendMessage = function(message, type) {
         var toSend = {};
