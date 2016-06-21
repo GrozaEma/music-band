@@ -3,7 +3,7 @@ angular
     .controller('PlayCtrl', PlayCtrl)
     .directive('keyboard', keyboard);
 
-function PlayCtrl($rootScope, $scope, userService, $stateParams, musicNotes) {
+function PlayCtrl($rootScope, $scope, userService, $stateParams, socketDataService) {
     $scope.currentUser = $stateParams.username;
     $scope.instrument = $stateParams.instrument;
     $scope.playNote = playNote;
@@ -19,7 +19,13 @@ function PlayCtrl($rootScope, $scope, userService, $stateParams, musicNotes) {
     }, true);
 
     function playNote(keyCode) {
-        musicNotes.playMusicNote($scope.instrument, keyCode);
+        // musicNotes.playMusicNote($scope.instrument, keyCode);
+
+        socketDataService.sendMessage({
+            user: $scope.currentUser,
+            instrument: $scope.instrument,
+            keyCode: keyCode
+        }, 'sound');
     }
 }
 

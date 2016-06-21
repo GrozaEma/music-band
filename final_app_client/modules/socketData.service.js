@@ -94,8 +94,10 @@ function socketDataService($q, $rootScope, userService) {
     //     return promise;
     // }
 
-    Service.sendMessage = function(message) {
-        return sendData({ data: message });
+    Service.sendMessage = function(message, type) {
+        var toSend = {};
+        toSend[type] = message;
+        return sendData(toSend);
     }
 
     return Service;

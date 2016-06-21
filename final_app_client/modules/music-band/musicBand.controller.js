@@ -12,7 +12,7 @@ function MusicBandCtrl($rootScope, $scope, socketDataService, $state, musicNotes
 
     // test socket
     var message = 'd';
-    socketDataService.sendMessage(message);
+    socketDataService.sendMessage(message, 'sound');
 
     // $scope.$rootScope('userService.users.length', function() {
     //     console.info('WATCH MB.CTRL: ', userService.users);
@@ -21,26 +21,24 @@ function MusicBandCtrl($rootScope, $scope, socketDataService, $state, musicNotes
 
     function socketListener(message) {
         console.log("Received data from websocket: ", message);
-        var msg = message.data;
-        if (msg.user) {
+        if (message.user) {
             // show user
-            console.log('USER: ', msg.user);
-            // if (msg.name !== $scope.userName) {
+            console.log('USER: ', message.user);
+            // if (message.name !== $scope.userName) {
                 // new user - display instrument
-                userService.users.push(msg.user);
+                userService.users.push(message.user);
                 $rootScope.$apply();
             // }
-        } else {
-            playMusicSound(msg);
+        } else if (message.sound) {
+            playMusicSound(message.sound);
         }
     }
 
     function playMusicSound(message) {
-        console.log(musicNotes[message]);
         var sound = new Howl({
-            urls: [musicNotes[message]]
+            urls: [musicNotes[message.instrument][message.keyCode]]
         });
-        console.log(sound);
+        console.log('PLAY sound: ', message.instrument, message.keyCode);
         sound.play();
     }
     
@@ -48,12 +46,10 @@ function MusicBandCtrl($rootScope, $scope, socketDataService, $state, musicNotes
         $scope.instrument = instrument;
         // send to server user info
         var msg = {
-            user: {
-                name: $scope.userName,
-                instrument: instrument
-            }
+            name: $scope.userName,
+            instrument: instrument
         };
-        socketDataService.sendMessage(msg);
+        socketDataService.sendMessage(msg, 'user');
 
         console.log('Now playing the ', instrument, '!');
         $state.go('play', {
