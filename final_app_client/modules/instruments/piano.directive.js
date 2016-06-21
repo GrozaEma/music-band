@@ -4,7 +4,9 @@ angular
 
 function mbPiano() {
     return {
-        scope: {},
+        scope: {
+            play: '=keyboard'
+        },
         restrict: "EA",
         templateUrl: "/modules/instruments/piano.html",
         link: function(scope) {
