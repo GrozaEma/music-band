@@ -20,8 +20,8 @@ function socketDataService($q, $rootScope, userService) {
     Service.init = function() {
         var defer = $q.defer();
         // Create our websocket object with the address to the websocket
-        // ws = new WebSocket('ws://127.0.0.1:1337');
-        ws = new WebSocket('ws://192.168.0.14:1337');
+        ws = new WebSocket('ws://127.0.0.1:1337');
+        // ws = new WebSocket('ws://192.168.0.14:1337');
         // ws = new WebSocket('ws://192.168.2.6:1337');
 
         ws.onopen = function(){  
@@ -63,7 +63,7 @@ function socketDataService($q, $rootScope, userService) {
 
         if (message.connectedUsers) {
             console.log('connectedUsers: ', message.connectedUsers);
-            userService.users.concat(message.connectedUsers);
+            userService.users = userService.users.concat(message.connectedUsers);
             $rootScope.$apply();
         }
     }
