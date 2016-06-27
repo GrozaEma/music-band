@@ -14,7 +14,7 @@ var http = require('http');
  */
 
 // list of currently connected clients (users)
-var clients = [ ];
+var clients = [];
 var connectedUsers = [];
 
 /**
@@ -24,11 +24,6 @@ function htmlEntities(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;')
         .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
-
-// Array with some colors
-var colors = [ 'red', 'green', 'blue', 'magenta', 'purple', 'plum', 'orange' ];
-// ... in random order
-colors.sort(function(a,b) { return Math.random() > 0.5; } );
 
 /**
  * HTTP server
@@ -76,10 +71,9 @@ function listener(request) {
     if (request.type === 'utf8') { // accept only text
         var message = JSON.parse(request.utf8Data);
         console.log(message);
-        console.log('typeof: ', typeof message.data);
-        if (typeof message.data === 'object' && message.data.user) {
-            console.log('user connected');
-            connectedUsers.push(message.data.user);
+        if (message.user) {
+            console.log('user ', message.user ,' connected');
+            connectedUsers.push(message.user);
         }
         sendMessageToAll(JSON.stringify(message));
     }

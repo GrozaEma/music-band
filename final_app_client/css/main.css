@@ -2,13 +2,9 @@ body, *, h1, h3, p, label, span, input, button, .container .music-form .username
   font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
   font-style: normal; }
 
-body, * {
-  margin: 0;
-  padding: 0; }
-
 body {
-  background-color: #E6DCDB;
-  color: #7E3661;
+  background-color: #FFFCE6;
+  color: #249991;
   text-align: center; }
 
 h1 {
@@ -42,7 +38,7 @@ p, label, span, input, button {
   text-align: center;
   width: 1170px; }
   .container .music-form {
-    background-color: #7E3661;
+    background-color: #249991;
     border: 3px solid #F6F7F2;
     border-radius: 20px;
     color: #F6F7F2;
@@ -104,12 +100,12 @@ p, label, span, input, button {
   clear: both;
   overflow: auto;
   min-height: 700px;
-  background-color: #7E3661;
+  background-color: #249991;
   border-radius: 20px;
   border: 3px solid #F6F7F2; }
 
 .sidebar {
-  background-color: #7E3661;
+  background-color: #249991;
   border: 3px solid #F6F7F2;
   border-radius: 20px;
   position: relative;
@@ -120,7 +116,8 @@ p, label, span, input, button {
   min-height: 700px;
   margin-top: -706px; }
   .sidebar ul {
-    list-style: outside none none; }
+    list-style: outside none none;
+    padding: 0; }
     .sidebar ul li span {
       display: block; }
     .sidebar ul li img {
@@ -154,7 +151,8 @@ p, label, span, input, button {
 ul#piano {
   display: block;
   max-width: 840;
-  height: 440px; }
+  height: 230px;
+  padding: 0 10px; }
 
 ul#piano li {
   list-style: none;

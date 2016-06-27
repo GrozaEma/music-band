@@ -10,11 +10,6 @@ function MusicBandCtrl($rootScope, $scope, socketDataService, $state, musicNotes
     console.log('SET listener on service');
     socketDataService.listener = socketListener;
 
-    // test socket
-    var message = 'd';
-    socketDataService.sendMessage(message, 'sound');
-
-
     function socketListener(message) {
         console.log("Received data from websocket: ", message);
         if (message.user) {

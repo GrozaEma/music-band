@@ -1,6 +1,6 @@
-$background-color: #E6DCDB;
+$background-color: #FFFCE6;
 
-$accent-color: #7E3661;
+$accent-color: #249991;
 $light-color: #F6F7F2;
 $min-height: 700px;
 
@@ -11,8 +11,6 @@ $min-height: 700px;
 
 body, * {
     @extend %font-definition;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -179,6 +177,7 @@ p, label, span, input, button {
 
     ul {
         list-style: outside none none;
+        padding: 0;
         li {
             span {
                 display: block;
